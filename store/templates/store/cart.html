@@ -1,0 +1,503 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Your e-commerce site description here">
+    <meta name="keywords" content="ecommerce, shopping, online store">
+    <meta name="author" content="Your Name or Company">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
+
+    <title>Quickcart E-commerce</title>
+
+    
+{% load static %}
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.css' %}">
+<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+<!-- Slick slider css -->
+<link rel="stylesheet" href="{% static 'css/slick.css' %}">
+<link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+
+<!-- Animate icon -->
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+<!-- Themify icon -->
+<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+
+<!-- Bootstrap css -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+<!-- Theme css -->
+<link rel="stylesheet" href="{% static 'css/color19.css' %}" media="screen" id="color">
+
+</head>
+<body>
+
+
+    <!-- header start -->
+    <header class="header-tools marketplace">
+        <div class="mobile-fix-option"></div>
+        <div class="top-header">
+            <div class="container-fluid custom-container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header-contact">
+                            <ul>
+                                <li>Welcome to Quickcart Downloads</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: 123 - 456 - 7890</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <ul class="header-dropdown">
+                            <li class="onhover-dropdown mobile-account"> <span data-brackets-id="5088" class="fa fa-user"></span>
+                                My Account
+                                <ul class="onhover-show-div">
+                                    <li><a href="{%url 'login'%}" data-lng="en">Login</a></li>
+                                    <li><a href="{% url 'logout'%}" data-lng="es">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custom-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="main-menu">
+                        <div class="menu-left">
+                            <div class="navbar">
+                                <a href="javascript:void(0)" onclick="openNav()">
+                                    <div class="bar-style"><i class="fa fa-bars sidebar-bar" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                                <div id="mySidenav" class="sidenav">
+                                    <a href="javascript:void(0)" class="sidebar-overlay" onclick="closeNav()"></a>
+                                    <nav>
+                                        <div onclick="closeNav()">
+                                            <div class="sidebar-back text-left"><i class="fa fa-angle-left pr-2"
+                                                    aria-hidden="true"></i> Back</div>
+                                        </div>
+                                        <ul id="sub-menu" class="sm pixelstrap sm-vertical">
+                                            <li> <a href="#">clothing</a>
+                                                <ul id="sub-menu" class="sm pixelstrap sm-vertical">
+                                            
+                                            <li> <a href="{% url 'headsets_view' %}">Headsets</a>
+                                                
+                                            </li>
+                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
+                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
+                                            
+                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="brand-logo">
+                                <a href="{% url 'index' %}"><img src="images/logo.jpg"
+                                        class="img-fluid blur-up lazyload" alt="Logo"></a>
+                            </div>
+                        </div>
+                        <div class="menu-right pull-right">
+                            <div>
+                                <nav id="main-nav">
+                                    <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+                                    <ul id="main-menu" class="sm pixelstrap sm-horizontal">
+                                        <li>
+                                            <div class="mobile-back text-right">Back<i class="fa fa-angle-right pl-2"
+                                                    aria-hidden="true"></i></div>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'index'%}">Home</a>
+                                        </li>
+                                        <style>
+                                        .dropdown-menu {
+                                                display: none;
+                                                position: absolute;
+                                                background-color: #555;
+                                                border-radius: 5px;
+                                                padding: 10px;
+                                                 top: 100%; /* Add this line */
+                                                    left: 50%; /* Center the dropdown */
+                                                    transform: translateX(-50%); /* Center the dropdown */
+                                                    z-index: 1; /* Add this line */                                            }
+                                         .onhover-dropdownn:hover .dropdown-menu {
+                                            display: block;
+                                        }
+
+                                        /* Style the dropdown items */
+                                        .dropdown-menu > li {
+                                            margin-bottom: 5px;
+                                        }
+
+                                        /* Style links */
+                                        a {
+                                            text-decoration: none;
+                                            color: #fff;
+                                        }
+
+                                        /* Change link color on hover */
+                                        a:hover {
+                                            color: #ffd700;
+                                        }
+                                        </style>
+                                        <li class="onhover-dropdownn">
+                                           <a href="{%url 'shop' %}">Store</a>
+                                            <ul class="dropdown-menu">
+                                                <li> <a href="{% url 'headsets_view' %}">Headsets</a>
+                                                
+                                            </li>
+                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
+                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
+                                            
+                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li>
+                                           <a href="{% url 'about' %}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div>
+                                <div class="icon-nav">
+                                    <ul>
+                                        <li class="onhover-div mobile-search">
+                                            <div><img src="images/search.png" onclick="openSearch()"
+                                                    class="img-fluid " alt=""> <i class="fa fa-search"
+                                                    onclick="openSearch()"></i></div>
+                                            <div id="search-overlay" class="search-overlay">
+                                                <div> <span class="closebtn" onclick="closeSearch()"
+                                                        title="Close Overlay">×</span>
+                                                    <div class="overlay-content">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-xl-12">
+                                                                    <form>
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control"
+                                                                                id="exampleInputPassword1"
+                                                                                placeholder="Search a Product">
+                                                                        </div>
+                                                                        <button type="submit" class="btn btn-primary"><i
+                                                                                class="fa fa-search"></i></button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+<!-- breadcrumb start -->
+<div class="breadcrumb-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="page-title">
+          <h2>Cart</h2>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <nav aria-label="breadcrumb" class="theme-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active">Cart</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- breadcrumb end -->
+<!--section start-->
+<section class="cart-section section-b-space">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <form method="POST" action="{% url 'update_cart' %}">
+          {% csrf_token %}
+          <table class="table cart-table table-responsive-xs">
+            <thead>
+              <tr class="table-head">
+                <th scope="col">Image</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total Price</th> <!-- New Column -->
+                <th scope="col">Action</th>
+              </tr>
+            <tbody>
+            {% for item in cart_items %}
+              <tr data-product-id="{{ item.product.id }}" data-price="{{ item.product.dp }}">
+                <td>
+                  <img src="{{ item.product.image.url }}" alt="{{ item.product.Title }}" style="width:60px;"/>
+                </td>
+                <td>
+                  {{ item.product.Title }}
+                </td>
+                <td>
+                  <div class="qty-box">
+                    <div class="input-group">
+                      <input type="number" 
+                        name="quantity_{{ item.product.id }}" 
+                        class="form-control input-number quantity-input" 
+                        value="{{ item.quantity }}" 
+                        min="1"
+              
+                        data-stock="{{ item.product.stock }}"
+                        data-product-id="{{ item.product.id }}" />
+              
+                      </div>
+                       <small id="stock-warning-{{ item.product.id }}" 
+           class="text-danger stock-warning" 
+           style="display: none; font-weight: bold;"></small>
+                  </div>
+                </td>
+                <td>
+                  <h2>Rs.  {{ item.product.dp|floatformat:2 }}</h2>
+                </td>
+                <td class="item-total-price">
+                  <h2>Rs.  0.00</h2> <!-- JS will update this -->
+                </td>
+                <td>
+                  <a href="{% url 'remove_from_cart' item.product.id %}" class="icon" onclick="return confirm('Remove this item?');">
+                    <i class="fa fa-close"></i>
+                  </a>
+                </td>
+              </tr>
+            {% empty %}
+              <tr><td colspan="6" class="text-center">Your cart is empty.</td></tr>
+            {% endfor %}
+          </tbody>
+
+          </table>
+
+          <table class="table cart-table table-responsive-md">
+            <tfoot>
+            <tr>
+              <td colspan="4"><strong>Total:</strong></td>
+              <td><strong id="cart-subtotal">Rs.  {{ subtotal }}</strong></td>
+              <td></td>
+            </tr>
+          </tfoot>
+
+          </table>
+
+          <div class="row cart-buttons">
+            <div class="col-6">
+              <a href="{% url 'shop' %}" class="btn btn-solid">Continue Shopping</a>
+            </div>
+            <div class="col-6">
+              <button type="submit" name="checkout" class="btn btn-solid">Check Out</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--section end-->
+
+
+    <!-- tap to top -->
+    <div class="tap-top top-cls">
+        <div>
+            <i class="fa fa-angle-double-up"></i>
+        </div>
+    </div>
+    <!-- tap to top end -->
+
+
+    <!-- latest jquery-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- fly cart ui jquery-->
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- exitintent jquery-->
+    <script src="js/jquery.exitintent.js"></script>
+    <script src="js/exit.js"></script>
+
+    <!-- popper js-->
+    <script src="js/popper.min.js"></script>
+
+    <!-- slick js-->
+    <script src="js/slick.js"></script>
+
+    <!-- menu js-->
+    <script src="js/menu.js"></script>
+
+    <!-- lazyload js-->
+    <script src="js/lazysizes.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Bootstrap Notification js-->
+    <script src="js/bootstrap-notify.min.js"></script>
+
+    <!-- Fly cart js-->
+    <script src="js/fly-cart.js"></script>
+
+    <!-- Theme js-->
+    <script src="js/script.js"></script>
+
+    <script>
+        Rs.  (window).on('load', function () {
+            setTimeout(function () {
+                Rs.  ('#exampleModal').modal('show');
+            }, 2500);
+        });
+        function openSearch() {
+            document.getElementById("search-overlay").style.display = "block";
+        }
+
+        function closeSearch() {
+            document.getElementById("search-overlay").style.display = "none";
+        }
+    </script>
+    <script>
+  // Wait for DOM
+  document.addEventListener("DOMContentLoaded", function() {
+    const quantityInputs = document.querySelectorAll(".quantity-input");
+    const subtotalElem = document.getElementById("cart-subtotal");
+
+    function updatePrices() {
+      let subtotal = 0;
+
+      quantityInputs.forEach(input => {
+        const tr = input.closest("tr");
+        const price = parseFloat(tr.dataset.price);
+        const quantity = parseInt(input.value) || 1;
+
+        const stock = parseInt(input.getAttribute("data-stock"));
+        if (quantity < 1 || quantity > stock) {
+          quantity = 0;
+        }
+
+        const totalPrice = price * quantity;
+
+        // Update item total price column
+        const totalPriceElem = tr.querySelector(".item-total-price h2");
+        totalPriceElem.textContent = "Rs.  " + totalPrice.toFixed(2);
+
+        subtotal += totalPrice;
+      });
+
+      // Update subtotal in footer
+      subtotalElem.textContent = "Rs.  " + subtotal.toFixed(2);
+    }
+
+    // Attach input event listener for quantity changes
+    quantityInputs.forEach(input => {
+      input.addEventListener("input", () => {
+        // Prevent quantity < 1
+        if(input.value < 1) input.value = 1;
+        updatePrices();
+      });
+    });
+
+    // Initial update on page load
+    updatePrices();
+  });
+</script>
+
+    <script>
+    function updateQuantity(input, price, rowTotalElement, totalElement) {
+        var quantity = parseInt(input.value);
+        
+        // Set default value to 1 if input is not a valid number
+        if (isNaN(quantity) || quantity < 1) {
+            input.value = 1;
+            quantity = 1;
+        }
+        
+        var unitPrice = parseFloat(price);
+        var rowTotal = quantity * unitPrice;
+        rowTotalElement.textContent = rowTotal.toFixed(2);
+        
+        var total = 0;
+        var rowTotalElements = document.querySelectorAll('.row-total');
+        rowTotalElements.forEach(function(element) {
+            total += parseFloat(element.textContent);
+        });
+        
+        totalElement.textContent = total.toFixed(2);
+    }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".quantity-input").forEach(function (input) {
+    input.addEventListener("input", function () {
+      const stock = parseInt(this.getAttribute("data-stock"));
+      const quantity = parseInt(this.value);
+      const productId = this.getAttribute("data-product-id");
+      const warning = document.getElementById(`stock-warning-Rs.  {productId}`);
+
+      if (quantity > stock) {
+        this.value = stock;
+        if (warning) {
+          warning.textContent = `Only Rs.  {stock} item(s) in stock.`;
+          warning.style.display = "block";
+        }
+      } else {
+        if (warning) {
+          warning.textContent = "";
+          warning.style.display = "none";
+        }
+      }
+    });
+  });
+});
+</script>
+
+
+</body>
+
+</html>

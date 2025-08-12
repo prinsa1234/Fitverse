@@ -1,0 +1,458 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Your e-commerce site description here">
+    <meta name="keywords" content="ecommerce, shopping, online store">
+    <meta name="author" content="Your Name or Company">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
+
+    <title>Quickcart E-commerce</title>
+
+    
+{% load static %}
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.css' %}">
+<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+<!-- Slick slider css -->
+<link rel="stylesheet" href="{% static 'css/slick.css' %}">
+<link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+
+<!-- Animate icon -->
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+<!-- Themify icon -->
+<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+
+<!-- Bootstrap css -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+<!-- Theme css -->
+<link rel="stylesheet" href="{% static 'css/color19.css' %}" media="screen" id="color">
+
+<body>
+
+
+      <!-- header start -->
+    <header class="header-tools marketplace">
+        <div class="mobile-fix-option"></div>
+        <div class="top-header">
+            <div class="container-fluid custom-container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header-contact">
+                            <ul>
+                                <li>Welcome to Quickcart Downloads</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: 123 - 456 - 7890</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <ul class="header-dropdown">
+                            <li class="onhover-dropdown mobile-account"> <span data-brackets-id="5088" class="fa fa-user"></span>
+                                My Account
+                                <ul class="onhover-show-div">
+                                    <li><a href="{% url 'login' %}" data-lng="en">Login</a></li> 
+                                    <li><a href="{% url 'logout' %}" data-lng="es">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custom-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="main-menu">
+                        <div class="menu-left">
+                            
+                            <div class="brand-logo">
+                                <a href="{% url 'index' %}"><img src="{%static 'images/logo.jpg' %}" alt="Logo"></a>
+                            </div>
+                        </div>
+                        <div class="menu-right pull-right">
+                            <div>
+                                <nav id="main-nav">
+                                    <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+                                    <ul id="main-menu" class="sm pixelstrap sm-horizontal">
+                                        <li>
+                                            <div class="mobile-back text-right">Back<i class="fa fa-angle-right pl-2"
+                                                    aria-hidden="true"></i></div>
+                                            
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'index' %}">Home</a>
+                                        </li>
+                                        <style>
+                                        .dropdown-menu {
+                                                display: none;
+                                                position: absolute;
+                                                background-color: #555;
+                                                border-radius: 5px;
+                                                padding: 10px;
+                                                 top: 100%; /* Add this line */
+                                                    left: 50%; /* Center the dropdown */
+                                                    transform: translateX(-50%); /* Center the dropdown */
+                                                    z-index: 1; /* Add this line */                                            }
+                                         .onhover-dropdownn:hover .dropdown-menu {
+                                            display: block;
+                                        }
+
+                                        /* Style the dropdown items */
+                                        .dropdown-menu > li {
+                                            margin-bottom: 5px;
+                                        }
+
+                                        /* Style links */
+                                        a {
+                                            text-decoration: none;
+                                            color: #fff;
+                                        }
+
+                                        /* Change link color on hover */
+                                        a:hover {
+                                            color: #ffd700;
+                                        }
+                                        </style>
+                                        <li class="onhover-dropdownn">
+                                           <a href="{% url 'shop' %}">Store</a>
+                                            <ul class="dropdown-menu">
+                                                <li> <a href="{% url 'headsets_view' %}">Headsets</a>
+                                                
+                                            </li>
+                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
+                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
+                                            
+                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="{% url 'about' %}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div>
+                                <div class="icon-nav">
+                                    <ul>
+                                        <li class="onhover-div mobile-search">
+                                            <div><img src="images/search.png" onclick="openSearch()"
+                                                    class="img-fluid " alt=""> <i class="fa fa-search"
+                                                    onclick="openSearch()"></i></div>
+                                            <div id="search-overlay" class="search-overlay">
+                                                <div> <span class="closebtn" onclick="closeSearch()"
+                                                        title="Close Overlay">×</span>
+                                                    <div class="overlay-content">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-xl-12">
+                                                                    <form>
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control"
+                                                                                id="exampleInputPassword1"
+                                                                                placeholder="Search a Product">
+                                                                        </div>
+                                                                        <button type="submit" class="btn btn-primary"><i
+                                                                                class="fa fa-search"></i></button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="onhover-div mobile-cart">
+                                         <li class="onhover-div mobile-cart">
+                                        <div>
+                                            <img src="images/cart.png" class="img-fluid" alt="">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </div>
+                                        <ul class="show-div shopping-cart">
+
+                                            <!-- Display Subtotal -->
+                                            <li>
+                                                <div class="total">
+                                                    <h5>subtotal : <span>$<?php echo $sub; ?></span></h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                            <div class="buttons">
+                                                
+                                            </div>
+                                        </li>
+                                        </ul>
+                                    </li>
+
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- breadcrumb start -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-title">
+                        <h2>Contact Us</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                        
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb End -->
+    <div class="col-lg-9">
+       <div class="dashboard-right">
+         <div class="dashboard">
+           <div class="row">
+             <div class="col-12">
+               <div class="card mt-0">
+                  <div class="card-body">
+                      <div class="dashboard-box">
+                       <div class="dashboard-title">
+                          <h4>Contact Us</h4>
+                          {% if error %}
+                                <div style="color:red;">{{ error }}</div>
+                            {% endif %}
+                            {% if success %}
+                                <div style="color:green;">Thank you for your message! We will get back to you soon.</div>
+                            {% endif %}
+
+                            </div>
+                              <div data-brackets-id="15599" class="tab-pane fade active show" id="account" role="tabpanel" aria-labelledby="account-tab">
+                            <form class="needs-validation user-add" novalidate="" method = "POST" action = "{% url 'contact' %}">
+                                {% csrf_token %}
+                                    <div class="form-group row">
+                                        <label for="validationCustom0" class="col-xl-3 col-md-4">Name</label>
+                                        <input class="form-control col-xl-8 col-md-7" id="validationCustom0" type="text" name="name" required="" placeholder="Your Name">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="validationCustom1" class="col-xl-3 col-md-4">Email</label>
+                                        <input class="form-control col-xl-8 col-md-7" id="validationCustom1" type="email" name="email" required="" placeholder="Your Email">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="validationCustom2" class="col-xl-3 col-md-4">Phone</label>
+                                        <input class="form-control col-xl-8 col-md-7" id="validationCustom2" type="tel" name="phone" required="" placeholder="Your Phone Number">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="validationCustom3" class="col-xl-3 col-md-4">Subject</label>
+                                        <input class="form-control col-xl-8 col-md-7" id="validationCustom3" type="text" name="subject" required="" placeholder="Subject of your message">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="validationCustom4" class="col-xl-3 col-md-4">Message</label>
+                                        <textarea class="form-control col-xl-8 col-md-7" name="msg" id="validationCustom4" rows="5" required="" placeholder="Your Message"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-xl-3 col-md-4"></div>
+                                        <div class="col-xl-8 col-md-7">
+                                           <div id="btn-withdraw">
+                                             <input type="submit"  name="save" class="btn btn-lg  btn-solid" id="mc-submit" value="Contact"></input>
+                                                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                        
+
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   
+
+    
+    <!-- footer -->
+    <footer class="footer-light">
+        <div class="light-layout">
+            <div class="container">
+                <section class="small-section border-section border-top-0">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="subscribe">
+                                <div>
+                                    <h4>KNOW IT ALL FIRST!</h4>
+                                    <p>Never Miss Anything From Our Store By Signing Up To Our Instagram Page.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <form
+                            <div class="form-inline auth-form">
+                                <div class="form-group mx-sm-3">
+                                    <p> Follow Us on instagram to get our latest updates  :  </p>
+                                    <br>    
+                                    <a href="https://www.instagram.com/dharini_thakkar/" target="_blank" class="btn btn-solid">
+                                    <i class="fab fa-instagram"></i> Follow us on Instagram
+                                    </a>
+                                </div>
+                                </div>
+                 
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <section class="section-b-space light-layout">
+            <div class="container">
+                <div class="row footer-theme partition-f">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-title footer-mobile-title">
+                            <h4>about</h4>
+                        </div>
+                        <div class="footer-contant">
+                            <div class="footer-logo"><img src="{%static 'images/logo.jpg' %}"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                           
+                        </div>
+                    </div>
+                    <div class="col offset-xl-1">
+                        <div class="sub-title">
+                            <div class="footer-title">
+                                <h4>my account</h4>
+                            </div>
+                            <div class="footer-contant">
+                                <ul>
+                                    <li><a href="{% url 'index' %}">home</a></li>
+                                    <li><a href="{% url 'shop' %}">store</a></li>
+                                    <li><a href="{% url 'about' %}">about us</a></li>
+                                    <li><a href="{% url 'contact' %}">contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="sub-title">
+                            <div class="footer-title">
+                                <h4>store information</h4>
+                            </div>
+                            <div class="footer-contant">
+                                <ul class="contact-list">
+                                    
+                                    <li><i class="fa fa-phone"></i>Call Us: 123-456-7898</li>
+                                    <li><i class="fa fa-envelope-o"></i>Email Us: <a href="#">Quickcart.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer end -->
+
+
+    <!-- tap to top -->
+    <div class="tap-top">
+        <div>
+            <i class="fa fa-angle-double-up"></i>
+        </div>
+    </div>
+    <!-- tap to top End -->
+
+
+
+    <!-- latest jquery-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- menu js-->
+    <script src="js/menu.js"></script>
+
+    <!-- lazyload js-->
+    <script src="js/lazysizes.min.js"></script>
+
+    <!-- popper js-->
+    <script src="js/popper.min.js"></script>
+
+    <!-- slick js-->
+    <script src="js/slick.js"></script>
+
+    <!-- dare picker js -->
+    <script src="js/date-picker.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Sidebar jquery-->
+    <script src="js/sidebar-menu.js"></script>
+
+    <!-- Bootstrap Notification js-->
+    <script src="js/bootstrap-notify.min.js"></script>
+
+    <!-- Theme js-->
+    <script src="js/script.js"></script>
+
+    <script>
+        function openSearch() {
+            document.getElementById("search-overlay").style.display = "block";
+        }
+
+        function closeSearch() {
+            document.getElementById("search-overlay").style.display = "none";
+        }
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+        $('#datepicker1').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+
+    </script>
+
+</body>
+
+</html>

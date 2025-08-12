@@ -1,0 +1,1079 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quickcart E-commerce - Register</title>
+    <meta name="description" content="Your e-commerce site description here" />
+    <meta name="keywords" content="ecommerce, shopping, online store" />
+    <meta name="author" content="Your Name or Company" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/1.jpg' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'images/1.jpg' %}" type="image/x-icon" />
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.css' %}" />
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}" />
+
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
+
+    <!-- Animate icon -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
+
+    <!-- Themify icon -->
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <!-- Also loading Bootstrap from CDN for latest -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Theme css -->
+    <link rel="stylesheet" href="{% static 'css/color19.css' %}" media="screen" id="color" />
+
+    <style>
+
+    body {
+        background: #f5f8fc;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(62, 80, 103, 0.15);
+    }
+
+    label {
+        font-weight: 600;
+        color: #3e5067;
+    }
+
+    input.form-control {
+        border: 1.5px solid #3e5067;
+        color: #3e5067;
+    }
+
+    input.form-control:focus {
+        border-color: #2a3b55;
+        box-shadow: 0 0 5px rgba(62, 80, 103, 0.4);
+        outline: none;
+    }
+
+    .btn-primary {
+        background-color: #3e5067;
+        border: none;
+        transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #2a3b55;
+    }
+
+
+        body {
+            background-color: #f8f9fa;
+            color: #3e5067;
+        }
+
+        .theme-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(62, 80, 103, 0.2);
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .theme-form label {
+            font-weight: 600;
+            color: #3e5067;
+        }
+
+        .theme-form input.form-control {
+            border: 1.5px solid #3e5067;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 1rem;
+            color: #3e5067;
+        }
+
+        .theme-form input.form-control:focus {
+            border-color: #2a3b55;
+            box-shadow: 0 0 6px #3e5067aa;
+            outline: none;
+        }
+
+        .btn-solid {
+            background-color: #3e5067;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-solid:hover {
+            background-color: #2a3b55;
+            color: #ddd;
+        }
+
+        .text-danger {
+            font-size: 0.875rem;
+        }
+
+        a {
+            color: rgb(183, 210, 246);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .custom-btn {
+            width: 250px;
+            height: 50px;
+            color: #f8f9fa;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    
+    <!-- header start -->
+    <header class="header-metro">
+        <div class="mobile-fix-option"></div>
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header-contact">
+                            <ul>
+                                <li class="mobile-wishlist"><b><h3>Welcome to Quickcart Downloads</b></h3></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <ul class="header-dropdown">
+                            <li class="mobile-wishlist"><a href="{% url 'login' %}">Login</a>
+                            </li>
+                            <li class=" mobile-account">
+                                <a href="{% url 'register' %}">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div >
+            <div class="container layout3-menu">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="main-menu row">
+                            <div class="absolute-logo">
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end --><!-- header end -->
+
+    <!-- Register Form Section -->
+    <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    <div class="card shadow-lg p-4" style="width: 100%; max-width: 900px; border-radius: 10px;">
+        <h3 class="text-center mb-4" style="color: #3e5067;">Create Your Account</h3>
+        <form method="POST" novalidate>
+            {% csrf_token %}
+
+            <div class="row">
+                <!-- Username -->
+                <div class="col-md-6 mb-3">
+                    <label for="id_username" class="form-label">Username</label>
+                    <input type="text" class="form-control" name="username" id="id_username"
+                        value="{{ form.username.value|default_if_none:'' }}">
+                    {% for error in form.username.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6 mb-3">
+                    <label for="id_email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="id_email"
+                        value="{{ form.email.value|default_if_none:'' }}">
+                    {% for error in form.email.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- First Name -->
+                <div class="col-md-6 mb-3">
+                    <label for="id_first_name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="first_name" id="id_first_name"
+                        value="{{ form.first_name.value|default_if_none:'' }}">
+                    {% for error in form.first_name.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Last Name -->
+                <div class="col-md-6 mb-3">
+                    <label for="id_last_name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="last_name" id="id_last_name"
+                        value="{{ form.last_name.value|default_if_none:'' }}">
+                    {% for error in form.last_name.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Address -->
+                <div class="col-12 mb-3">
+                    <label for="id_address" class="form-label">Address</label>
+                    <input type="text" class="form-control" name="address" id="id_address"
+                        value="{{ form.address.value|default_if_none:'' }}">
+                    {% for error in form.address.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Password -->
+                <div class="col-md-6 mb-3">
+                    <label for="id_password1" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password1" id="id_password1">
+                    {% for error in form.password1.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="col-md-6 mb-3">
+                    <label for="id_password2" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" name="password2" id="id_password2">
+                    {% for error in form.password2.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Non-field errors -->
+            {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+                {% for error in form.non_field_errors %}
+                <div>{{ error }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="d-grid mt-3">
+                <button type="submit" class="btn btn-primary btn-lg">Register</button>
+            </div>
+
+            <p class="mt-3 text-center">
+                Already have an account? <a href="{% url 'login' %}">Login here</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+<!-- footer start -->
+<footer class="footer-light footer-black mt-5">
+    <section class="section-b-space below-section light-layout">
+        <div class="container">
+            <div class="row footer-theme partition-f justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="sub-title">
+                        <div class="footer-title">
+                            <h4>Information</h4>
+                        </div>
+                        <div class="footer-contant">
+                            <ul class="contact-list list-unstyled">
+                                <li><i class="fa fa-phone"></i> Call Us: 123-456-7898</li>
+                                <li><i class="fa fa-envelope-o"></i> Email Us: dharinithakkar4@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="sub-footer text-center py-3">
+        <div class="container">
+            <p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright Ecommerce - Dharini Thakkar 2023</p>
+        </div>
+    </div>
+</footer>
+<!-- footer end -->
+
+    <!-- footer end -->
+
+    <!-- theme setting -->
+    
+    <div id="setting_box" class="setting-box">
+        <a href="javascript:void(0)" class="overlay" onclick="closeSetting()"></a>
+        <div class="setting_box_body">
+            <div onclick="closeSetting()">
+                <div class="sidebar-back text-left"><i class="fa fa-angle-left pr-2" aria-hidden="true"></i> Back</div>
+            </div>
+            <div class="setting-body">
+                <div class="setting-title">
+                    <h4>layout</h4>
+                </div>
+                <div class="setting-contant">
+                    <div class="row demo-section">
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo1"></div>
+                                <div class="demo-text">
+                                    <h4>Fashion</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('login.html')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo43">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>game</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('game.html')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo44">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>gym</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('gym-product.php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo45">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>tools</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('tools.php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo46">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>marijuana</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('marijuana.php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo47">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>metro</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('metro.php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo48">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>pets</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('pets.php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo49">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>video slider</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('video-slider.php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo50">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>left menu</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('left_sidebar-demo.php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo51">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>jewellery</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('jewellery.php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo2"></div>
+                                <div class="demo-text">
+                                    <h4>Fashion</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('fashion-2.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo3"></div>
+                                <div class="demo-text">
+                                    <h4>Fashion</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('fashion-3.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo4"></div>
+                                <div class="demo-text">
+                                    <h4>Shoes</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('shoes.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo5"></div>
+                                <div class="demo-text">
+                                    <h4>Bags</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('bags.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo6"></div>
+                                <div class="demo-text">
+                                    <h4>Watch</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('watch.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo7"></div>
+                                <div class="demo-text">
+                                    <h4>Kids</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('kids.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo8"></div>
+                                <div class="demo-text">
+                                    <h4>Flower</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('flower.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo9"></div>
+                                <div class="demo-text">
+                                    <h4>Nursery</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('nursery.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo10"></div>
+                                <div class="demo-text">
+                                    <h4>Vegetables</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('vegetables.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo11"></div>
+                                <div class="demo-text">
+                                    <h4>Beauty</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('beauty.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo12"></div>
+                                <div class="demo-text">
+                                    <h4>Instagram Shop</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('instagram-shop.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects effect-2">
+                            <div class="set-position">
+                                <div class="layout-container demo13"></div>
+                                <div class="demo-text">
+                                    <h4>Lookbook</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('lookbook-demo.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo14"></div>
+                                <div class="demo-text">
+                                    <h4>Light</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('light.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo15"></div>
+                                <div class="demo-text">
+                                    <h4>Full Page</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('full-page.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo16"></div>
+                                <div class="demo-text">
+                                    <h4>Electronic-1</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('electronic-1.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo17"></div>
+                                <div class="demo-text">
+                                    <h4>Electronic-2</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('electronic-2.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects effect-2">
+                            <div class="set-position">
+                                <div class="layout-container demo18"></div>
+                                <div class="demo-text">
+                                    <h4>Video</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('video.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo19"></div>
+                                <div class="demo-text">
+                                    <h4>Goggles</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('goggles.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects mb-0">
+                            <div class="set-position">
+                                <div class="layout-container demo20"></div>
+                                <div class="demo-text">
+                                    <h4>Parallax</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('parallax.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects mb-0">
+                            <div class="set-position">
+                                <div class="layout-container demo21"></div>
+                                <div class="demo-text">
+                                    <h4>Furniture</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('furniture.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-title">
+                    <h4>shop</h4>
+                </div>
+                <div class="setting-contant">
+                    <div class="row demo-section">
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo22"></div>
+                                <div class="demo-text">
+                                    <h4>left sidebar</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo24"></div>
+                                <div class="demo-text">
+                                    <h4>right sidebar</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page(right).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo23"></div>
+                                <div class="demo-text">
+                                    <h4>no sidebar</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page(no-sidebar).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo25"></div>
+                                <div class="demo-text">
+                                    <h4>popup</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page(sidebar-popup).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo52">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>metro</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page(metro).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo53">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>full width</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page(full-width).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo26"></div>
+                                <div class="demo-text">
+                                    <h4>infinite scroll</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page(infinite-scroll).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo54"></div>
+                                <div class="demo-text">
+                                    <h4>three grid</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page(3-grid).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects mb-0">
+                            <div class="set-position">
+                                <div class="layout-container demo55"></div>
+                                <div class="demo-text">
+                                    <h4>six grid</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page(6-grid).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects mb-0">
+                            <div class="set-position">
+                                <div class="layout-container demo56"></div>
+                                <div class="demo-text">
+                                    <h4>list view</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('category-page(list-view).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-title">
+                    <h4>product</h4>
+                </div>
+                <div class="setting-contant">
+                    <div class="row demo-section">
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo40">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>four image </h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(4-image).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo33"></div>
+                                <div class="demo-text">
+                                    <h4>left sidebar</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page.php')"
+                                            class="btn new-tab-btn">Preview</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo36"></div>
+                                <div class="demo-text">
+                                    <h4>right sidebar</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(right-sidebar).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo34"></div>
+                                <div class="demo-text">
+                                    <h4>no sidebar</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(no-sidebar).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo41">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>bundle</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(bundle).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo42">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>image swatch</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(image-swatch).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo32"></div>
+                                <div class="demo-text">
+                                    <h4>left image</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(left-image).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo35"></div>
+                                <div class="demo-text">
+                                    <h4>right image</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(right-image).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo31">
+                                    <div class="ribbon-1"><span>n</span><span>e</span><span>w</span></div>
+                                </div>
+                                <div class="demo-text">
+                                    <h4>image outside</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(image-outside).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo27"></div>
+                                <div class="demo-text">
+                                    <h4>3-col left</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(3-col-left).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo28"></div>
+                                <div class="demo-text">
+                                    <h4>3-col right</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(3-col-right).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo29"></div>
+                                <div class="demo-text">
+                                    <h4>3-col bottom</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(3-column).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo37"></div>
+                                <div class="demo-text">
+                                    <h4>sticky</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(sticky).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects">
+                            <div class="set-position">
+                                <div class="layout-container demo30"></div>
+                                <div class="demo-text">
+                                    <h4>accordian</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(accordian).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12 text-center demo-effects mb-0">
+                            <div class="set-position">
+                                <div class="layout-container demo38"></div>
+                                <div class="demo-text">
+                                    <h4>vertical tab</h4>
+                                    <div class="btn-group demo-btn" role="group" aria-label="Basic example"> <button
+                                            type="button" onClick="window.open('product-page(vertical-tab).php')"
+                                            class="btn new-tab-btn">Preview</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-title">
+                    <h4>color picker</h4>
+                </div>
+                <div class="setting-contant">
+                    <ul class="color-box">
+                        <li>
+                            <input id="ColorPicker1" type="color" value="#000000" name="Background">
+                            <span>theme deafult color</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="setting-title">
+                    <h4>RTL</h4>
+                </div>
+                <div class="setting-contant">
+                    <ul class="setting_buttons">
+                        <li class="active" id="ltr_btn"><a href="javascript:void(0)" class="btn setting_btn">LTR</a>
+                        </li>
+                        <li id="rtl_btn"><a href="javascript:void(0)" class="btn setting_btn">RTL</a></li>
+                    </ul>
+                </div>
+                <div class="buy_btn">
+                    <a href="https://themeforest.net/item/multikart-responsive-ecommerce-html-template/22809967?s_rank=1"
+                        target="_blank" class="btn btn-block purchase_btn"><i class="fa fa-shopping-cart"
+                            aria-hidden="true"></i> purchase Multikart now!</a>
+                    <a href="https://themeforest.net/item/multikart-responsive-angular-ecommerce-template/22905358?s_rank=3"
+                        target="_blank" class="btn btn-block purchase_btn"><img src="../assets/images/icon/angular.png"
+                            alt="" class="img-fluid"> Multikart Angular</a>
+                    <a href="https://themeforest.net/item/multikart-responsive-react-ecommerce-template/23067773?s_rank=2"
+                        target="_blank" class="btn btn-block purchase_btn"><img src="../assets/images/icon/react.png"
+                            alt="" class="img-fluid"> Multikart React</a>
+                    <a href="https://themeforest.net/item/multikart-multipurpose-shopify-sections-theme/23093831?s_rank=1"
+                        target="_blank" class="btn btn-block purchase_btn"><img src="../assets/images/icon/shopify.png"
+                            alt="" class="img-fluid"> Multikart Shopify</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- theme setting -->
+{% load static %}
+
+<!-- tap to top -->
+<div class="tap-top">
+    <div>
+        <i class="fa fa-angle-double-up"></i>
+    </div>
+</div>
+<!-- tap to top End -->
+
+<!-- JavaScript Libraries -->
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/isotope.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/menu.js' %}"></script>
+<script src="{% static 'js/lazysizes.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/slick.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/bootstrap-notify.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+<!-- Optional Modal Trigger -->
+<script>
+    $(window).on('load', function () {
+        $('#exampleModal').modal('show');
+    });
+
+    function openSearch() {
+        document.getElementById("search-overlay").style.display = "block";
+    }
+
+    function closeSearch() {
+        document.getElementById("search-overlay").style.display = "none";
+    }
+
+    // Scroll to top functionality
+    $('.tap-top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+</script>
+
+
+</body>
+
+</html>

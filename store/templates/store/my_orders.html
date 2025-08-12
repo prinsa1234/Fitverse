@@ -1,0 +1,586 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Your e-commerce site description here">
+    <meta name="keywords" content="ecommerce, shopping, online store">
+    <meta name="author" content="Your Name or Company">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
+
+    <title>Quickcart E-commerce</title>
+
+    
+{% load static %}
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.css' %}">
+<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+<!-- Slick slider css -->
+<link rel="stylesheet" href="{% static 'css/slick.css' %}">
+<link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+
+<!-- Animate icon -->
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+<!-- Themify icon -->
+<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+
+<!-- Bootstrap css -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+<!-- Theme css -->
+<link rel="stylesheet" href="{% static 'css/color19.css' %}" media="screen" id="color">
+
+</head>
+
+<body>
+
+
+    <!-- header start -->
+    <header class="header-tools marketplace">
+        <div class="mobile-fix-option"></div>
+        <div class="top-header">
+            <div class="container-fluid custom-container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header-contact">
+                            <ul>
+                                <li>Welcome to Quickcart Downloads</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: 123 - 456 - 7890</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <ul class="header-dropdown">
+                            <li class="onhover-dropdown mobile-account"> <span data-brackets-id="5088" class="fa fa-user"></span>
+                                My Account
+                                <ul class="onhover-show-div">                                    <li><a href="{% url 'login' %}" data-lng="en">Login</a></li> 
+                                    <li><a href="{%url 'logout' %}" data-lng="es">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custom-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="main-menu">
+                        <div class="menu-left">
+                            <div class="navbar">
+                                <a href="javascript:void(0)" onclick="openNav()">
+                                    <div class="bar-style"><i class="fa fa-bars sidebar-bar" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                                <div id="mySidenav" class="sidenav">
+                                    <a href="javascript:void(0)" class="sidebar-overlay" onclick="closeNav()"></a>
+                                    <nav>
+                                        <div onclick="closeNav()">
+                                            <div class="sidebar-back text-left"><i class="fa fa-angle-left pr-2"
+                                                    aria-hidden="true"></i> Back</div>
+                                        </div>
+                                        <ul id="sub-menu" class="sm pixelstrap sm-vertical">
+                                            
+                                            <li> <a href="{% url 'headsets_view' %}">Headsets</a>
+                                                
+                                            </li>
+                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
+                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
+                                            
+                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
+                                            
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="brand-logo">
+                                <a href="{% url 'index' %}"><img src="{%static 'images/logo.jpg' %}"
+                                        class="img-fluid blur-up lazyload" alt="Logo"></a>
+                            </div>
+                        </div>
+                        <div class="menu-right pull-right">
+                            <div>
+                                <nav id="main-nav">
+                                    <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+                                    <ul id="main-menu" class="sm pixelstrap sm-horizontal">
+                                        <li>
+                                            <div class="mobile-back text-right">Back<i class="fa fa-angle-right pl-2"
+                                                    aria-hidden="true"></i></div>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="{% url 'index' %}">Home</a>
+                                        </li>
+                                        <style>
+
+                                        .dropdown-menu {
+                                                display: none;
+                                                position: absolute;
+                                                background-color: #555;
+                                                border-radius: 5px;
+                                                padding: 10px;
+                                                 top: 100%; /* Add this line */
+                                                    left: 50%; /* Center the dropdown */
+                                                    transform: translateX(-50%); /* Center the dropdown */
+                                                    z-index: 1; /* Add this line */                                            }
+                                         .onhover-dropdownn:hover .dropdown-menu {
+                                            display: block;
+                                        }
+
+                                        /* Style the dropdown items */
+                                        .dropdown-menu > li {
+                                            margin-bottom: 5px;
+                                        }
+
+                                        /* Style links */
+                                        a {
+                                            text-decoration: none;
+                                            color: #fff;
+                                        }
+
+                                        /* Change link color on hover */
+                                        a:hover {
+                                            color: #ffd700;
+                                        }
+                                        </style>
+                                        <li class="onhover-dropdownn">
+                                           <a href="{%url 'shop' %}">Store</a>
+                                            <ul class="dropdown-menu">
+                                                <li> <a href="{% url 'headsets_view' %}">Headsets</a>
+                                                
+                                            </li>
+                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
+                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
+                                            
+                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                        <li>
+                                            <a href="{% url 'about' %}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}">Contact Us</a>
+                                        </li>
+
+
+                                </nav>
+                            </div>
+                            <div>
+                                <div class="icon-nav">
+                                    <ul>
+                                        <li class="onhover-div mobile-search">
+                                        <div>
+                                            <img src="images/search.png" onclick="openSearch()" class="img-fluid " alt="">
+                                            <i class="fa fa-search" onclick="openSearch()"></i>
+                                        </div>
+                                        <div id="search-overlay" class="search-overlay">
+                                            <div>
+                                                <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                                                <div class="overlay-content">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-xl-12">
+                                                                <style>
+                                                                    /* Add this CSS to style the search form and button */
+                                                                    .search-form {
+                                                                        display: flex;
+                                                                        align-items: center;
+                                                                    }
+
+                                                                    .search-form input[type="text"] {
+                                                                        flex: 1;
+                                                                        margin-right: 10px;
+                                                                    }
+
+                                                                    /* Adjust other CSS as needed for your styling */
+                                                                </style>
+
+                                                                <form method="POST" >
+                                                                    <div class="form-group search-form">
+                                                                        <input type="text" name="title" class="form-control" id="exampleInputPassword1"
+                                                                            placeholder="Search a Product">
+                                                                        <input type="submit" class="btn btn-solid" name="search" value="Search">
+                                                                    </div>
+                                                                
+                                                            </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="onhover-div mobile-cart">
+                                    <div>
+                                        <img src="{% static 'images/cart.png' %}" class="img-fluid" alt="Cart Icon">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span id="cart-message" class="cart-message">
+                                        {% if cart_items %}
+                                            {{ cart_items|length }}
+                                        {% else %}
+                                            0
+                                        {% endif %}
+                                        </span>
+                                    </div>
+                                    <ul class="show-div shopping-cart">
+                                        {% if cart_items %}
+                                        {% for item in cart_items %}
+                                            <li>
+                                            <div class="media">
+                                                <a href="#">
+                                                <img src="{{ item.product.image.url }}" class="mr-3" alt="{{ item.product.Title }}" style="width: 60px; height: auto;" />
+                                                </a>
+                                                <div class="media-body">
+                                                <h6 class="mt-0">{{ item.product.Title }}</h6>
+                                                <p>Qty: {{ item.quantity }} × Rs.  {{ item.product.dp }}</p>
+                                                </div>
+                                            </div>
+                                            </li>
+                                        {% endfor %}
+                                        <li>
+                                            <div class="total">
+                                            <h5>Subtotal : <span>Rs.  {{ subtotal|floatformat:2 }}</span></h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="buttons">
+                                            <a href="{% url 'cart_view' %}" class="view-cart">View Cart</a>
+                                            <a href="{% url 'checkout'%}" class="checkout">Checkout</a>
+                                            </div>
+                                        </li>
+                                        {% else %}
+                                        <li class="text-center py-3">Your cart is empty.</li>
+                                        {% endif %}
+                                    </ul>
+                                    </li>
+                                    {% if user.is_authenticated %}
+                                    <li class="onhover-div mobile-cart">
+                                        <div>
+                                            <img src="{% static 'images/sale1.png' %}" class="img-fluid" alt="Orders Icon">
+                                            <i class="fa fa-box"></i>
+                                            <span id="orders-message" class="cart-message">
+                                                {{ user_orders|length }}
+                                            </span>
+                                        </div>
+                                        <ul class="show-div shopping-cart">
+                                            {% if user_orders %}
+                                                {% for order in user_orders %}
+                                                    <li>
+                                                        <div class="media">
+                                                            <div class="media-body">
+                                                                <h6 class="mt-0">Order #{{ order.id }}</h6>
+                                                                <p>Total: Rs. {{ order.total }}</p>
+                                                                <small>Status: {{ order.status }}</small>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                {% endfor %}
+                                                <li>
+                                                    <div class="buttons">
+                                                        <a href="{% url 'Orders' %}" class="view-cart">View All Orders</a>
+                                                    </div>
+                                                </li>
+                                            {% else %}
+                                                <li class="text-center py-3">No orders yet.</li>
+                                            {% endif %}
+                                        </ul>
+                                    </li>
+                                    {% endif %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+<style>
+  table {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  th, td {
+    vertical-align: middle !important;
+    font-size: 1rem;
+  }
+
+  .badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.8em;
+  }
+  .badge-pending {
+  background-color: #2c3e50; /* or your theme color */
+  color: #fff;
+}
+
+</style>
+
+<div class="container my-5">
+  <h2 class="mb-4">Your Orders</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered align-middle text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Order ID</th>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% with counter=0 %}
+        {% for order in orders %}
+          {% for item in order.items.all %}
+            {% with counter=forloop.counter0|add:forloop.parentloop.counter0|add:1 %}
+            <tr>
+              <td>{{ forloop.parentloop.counter0|add:forloop.counter }}</td>
+              <td>#{{ order.id }}</td>
+              <td>{{ item.product_title }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>Rs. {{ item.price }}</td>
+              <td>Rs. {{ item.total }}</td>
+              <td>
+                {% if order.status == 'Pending' %}
+                  <span class="badge badge-pending">{{ order.status }}</span>
+                {% else %}
+                  <span class="badge bg-success">{{ order.status }}</span>
+                {% endif %}
+              </td>
+            </tr>
+            {% endwith %}
+          {% endfor %}
+        {% endfor %}
+        {% endwith %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <!-- footer -->
+    <footer class="footer-light">
+        <div class="light-layout">
+            <div class="container">
+                <section class="small-section border-section border-top-0">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="subscribe">
+                                <div>
+                                    <h4>KNOW IT ALL FIRST!</h4>
+                                    <p>Never Miss Anything From Our Store By Signing Up To Our Newsletter.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <form
+                                action="https://pixelstrap.us19.list-manage.com/subscribe/post?u=5a128856334b598b395f1fc9b&amp;id=082f74cbda"
+                                class="form-inline subscribe-form auth-form needs-validation" method="post"
+                                id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                                <div class="form-group mx-sm-3">
+                                    <input type="text" class="form-control" name="EMAIL" id="mce-EMAIL"
+                                        placeholder="Enter your email" required="required">
+                                </div>
+                                <button type="submit" class="btn btn-solid" id="mc-submit">subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <section class="section-b-space light-layout">
+            <div class="container">
+                <div class="row footer-theme partition-f">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-title footer-mobile-title">
+                            <h4>about</h4>
+                        </div>
+                        <div class="footer-contant">
+                            <div class="footer-logo"><img src="sale.png" alt="Logo"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                           
+                        </div>
+                    </div>
+                    <div class="col offset-xl-1">
+                        <div class="sub-title">
+                            <div class="footer-title">
+                                <h4>my account</h4>
+                            </div>
+                            <div class="footer-contant">
+                                <ul>
+                                    <li><a href="{% url 'index' %}">home</a></li>
+                                    <li><a href="{% url 'shop' %}">store</a></li>
+                                    <li><a href="{% url 'about' %}">about us</a></li>
+                                    <li><a href="{% url 'contact' %}">contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="sub-title">
+                            <div class="footer-title">
+                                <h4>store information</h4>
+                            </div>
+                            <div class="footer-contant">
+                                <ul class="contact-list">
+                                    
+                                    <li><i class="fa fa-phone"></i>Call Us: 123-456-7898</li>
+                                    <li><i class="fa fa-envelope-o"></i>Email Us: <a href="#">dharinithakkar4@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer end -->
+
+
+<!-- tap to top -->
+<div class="tap-top top-cls">
+    <div>
+        <i class="fa fa-angle-double-up"></i>
+    </div>
+</div>
+<!-- tap to top end -->
+
+<!-- latest jquery-->
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+
+<!-- fly cart ui jquery-->
+<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+
+<!-- exitintent jquery-->
+<script src="{% static 'js/jquery.exitintent.js' %}"></script>
+<script src="{% static 'js/exit.js' %}"></script>
+
+<!-- popper js-->
+<script src="{% static 'js/popper.min.js' %}"></script>
+
+<!-- slick js-->
+<script src="{% static 'js/slick.js' %}"></script>
+
+<!-- menu js-->
+<script src="{% static 'js/menu.js' %}"></script>
+
+<!-- lazyload js-->
+<script src="{% static 'js/lazysizes.min.js' %}"></script>
+
+<!-- Bootstrap js-->
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+<!-- Bootstrap Notification js-->
+<script src="{% static 'js/bootstrap-notify.min.js' %}"></script>
+
+<!-- Fly cart js-->
+<script src="{% static 'js/fly-cart.js' %}"></script>
+
+<!-- Theme js-->
+<script src="{% static 'js/script.js' %}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const forms = document.querySelectorAll('.add-to-cart-form');
+
+  forms.forEach(form => {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const productId = form.dataset.productId;
+      const quantityInput = form.querySelector('input[name="quantity"]');
+      const quantity = quantityInput ? quantityInput.value || 1 : 1;
+      const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      // Disable button to prevent multiple clicks
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Adding...";
+      }
+
+      fetch("{% url 'ajax_add_to_cart' %}", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'X-CSRFToken': csrfToken,
+        },
+        body: new URLSearchParams({
+          'product_id': productId,
+          'quantity': quantity,
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = "Add to Cart";
+        }
+
+        if (data.success) {
+          const itemCountElem = document.getElementById('cart-item-count');
+          const subtotalElem = document.getElementById('cart-subtotal');
+
+          if (itemCountElem) {
+            itemCountElem.textContent = data.cartItemCount;
+          }
+
+          if (subtotalElem) {
+            subtotalElem.textContent = parseFloat(data.subtotal).toFixed(2);
+          }
+
+          alert('Item added to cart!');
+          location.reload();  // Reload if needed
+        } else {
+          alert(data.message || 'Failed to add item to cart. It might be out of stock.');
+          location.reload();
+        }
+
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error adding item to cart');
+
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = "Add to Cart";
+        }
+      });
+    });
+  });
+});
+</script>
+
+</body>
+
+</html>
