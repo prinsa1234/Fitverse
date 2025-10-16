@@ -283,14 +283,14 @@ def checkout(request):
         profile = Profile.objects.get(user=user)
     except Profile.DoesNotExist:
         messages.error(request, "Profile not found. Please complete your profile before checking out.")
-        return redirect('cart')
+        return redirect('cart_view')
 
     if request.method == 'POST':
         # Check stock availability
         for item in cart_items:
             if item.product.stock < item.quantity:
                 messages.error(request, f"Insufficient stock for {item.product.Title}.")
-                return redirect('cart')
+                return redirect('cart_view')
 
         # Calculate total price
         total_price = sum(item.product.dp * item.quantity for item in cart_items)
@@ -661,6 +661,91 @@ def laptop_view(request):
         products = products.filter(q)
 
     return render(request, 'store/laptop.html', {'products': products , 'prices': price_filters})
+
+# --- Fashion category views ---
+def tshirts_view(request):
+    products = Product.objects.filter(Title__icontains='T-Shirt')
+    price_filters = request.GET.getlist('price')
+    if price_filters:
+        q = Q()
+        if '100' in price_filters:
+            q |= Q(Price__gte=10, Price__lte=200)
+        if '200' in price_filters:
+            q |= Q(Price__gt=200, Price__lte=400)
+        if '400' in price_filters:
+            q |= Q(Price__gt=400)
+        products = products.filter(q)
+    return render(request, 'store/tshirts.html', {'products': products , 'prices': price_filters})
+
+def tops_view(request):
+    products = Product.objects.filter(Title__icontains='Top')
+    price_filters = request.GET.getlist('price')
+    if price_filters:
+        q = Q()
+        if '100' in price_filters:
+            q |= Q(Price__gte=10, Price__lte=200)
+        if '200' in price_filters:
+            q |= Q(Price__gt=200, Price__lte=400)
+        if '400' in price_filters:
+            q |= Q(Price__gt=400)
+        products = products.filter(q)
+    return render(request, 'store/tops.html', {'products': products , 'prices': price_filters})
+
+def bottom_wear_view(request):
+    products = Product.objects.filter(Q(Title__icontains='Bottom') | Q(Title__icontains='Pant') | Q(Title__icontains='Jeans'))
+    price_filters = request.GET.getlist('price')
+    if price_filters:
+        q = Q()
+        if '100' in price_filters:
+            q |= Q(Price__gte=10, Price__lte=200)
+        if '200' in price_filters:
+            q |= Q(Price__gt=200, Price__lte=400)
+        if '400' in price_filters:
+            q |= Q(Price__gt=400)
+        products = products.filter(q)
+    return render(request, 'store/bottom_wear.html', {'products': products , 'prices': price_filters})
+
+def mens_tshirt_view(request):
+    products = Product.objects.filter(Q(Title__icontains='Men') & Q(Title__icontains='T-Shirt'))
+    price_filters = request.GET.getlist('price')
+    if price_filters:
+        q = Q()
+        if '100' in price_filters:
+            q |= Q(Price__gte=10, Price__lte=200)
+        if '200' in price_filters:
+            q |= Q(Price__gt=200, Price__lte=400)
+        if '400' in price_filters:
+            q |= Q(Price__gt=400)
+        products = products.filter(q)
+    return render(request, 'store/mens_tshirts.html', {'products': products , 'prices': price_filters})
+
+def women_tops_view(request):
+    products = Product.objects.filter(Q(Title__icontains='Women') & Q(Title__icontains='Top'))
+    price_filters = request.GET.getlist('price')
+    if price_filters:
+        q = Q()
+        if '100' in price_filters:
+            q |= Q(Price__gte=10, Price__lte=200)
+        if '200' in price_filters:
+            q |= Q(Price__gt=200, Price__lte=400)
+        if '400' in price_filters:
+            q |= Q(Price__gt=400)
+        products = products.filter(q)
+    return render(request, 'store/women_tops.html', {'products': products , 'prices': price_filters})
+
+def polo_shirts_view(request):
+    products = Product.objects.filter(Q(Title__icontains='Polo') | Q(Title__icontains='Polo Shirt'))
+    price_filters = request.GET.getlist('price')
+    if price_filters:
+        q = Q()
+        if '100' in price_filters:
+            q |= Q(Price__gte=10, Price__lte=200)
+        if '200' in price_filters:
+            q |= Q(Price__gt=200, Price__lte=400)
+        if '400' in price_filters:
+            q |= Q(Price__gt=400)
+        products = products.filter(q)
+    return render(request, 'store/polo_shirts.html', {'products': products , 'prices': price_filters})
 
 @login_required
 def my_orders(request):

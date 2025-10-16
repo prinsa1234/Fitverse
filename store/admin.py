@@ -8,7 +8,7 @@ from .models import *
 
 
 admin.site.register(Product)
-admin.site.site_header = "QuickCart Admin"
+admin.site.site_header = "FitVerse Admin"
 admin.site.register(CartItem)
 admin.site.register(Profile)
 admin.site.register(AnonymousCartItem)

@@ -120,9 +120,6 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Kolkata'  # <-- Set to your local timezone
-USE_TZ = True
-
-
 USE_I18N = True
 
 USE_L10N = True
@@ -139,6 +136,9 @@ STATICFILES_DIRS = [
 
 ]
 
+# Directory where collectstatic will gather files for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
@@ -146,4 +146,7 @@ LOGIN_REDIRECT_URL = '/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Default primary key type for Django 5+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

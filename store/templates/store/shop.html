@@ -18,7 +18,7 @@
     <link rel="icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
     <link rel="shortcut icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
 
-    <title>FitVerse E-commerce</title>
+    <title>FitVerse </title>
 
     
 {% load static %}
@@ -96,20 +96,19 @@
                                         </div>
                                         <ul id="sub-menu" class="sm pixelstrap sm-vertical">
                                             
-                                            <li> <a href="{% url 'headsets_view' %}">Headsets</a>
+                                           <li> <a href="{% url 'shop' %}">Women Tops</a>
                                                 
                                             </li>
-                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
+                                            <li> <a href="{% url 'shop' %}">Shirts</a>
                                                 
                                             </li>
-                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
-                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
+                                            <li><a href="{% url 'shop' %}">Bottoms</a></li>
+                                            <li> <a href="{% url 'shop' %}">Pants</a>
                                                 
                                             </li>
-                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
+                                            <li><a href="{% url 'shop' %}">Men T-Shirts</a></li>
                                             
-                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
-                                            
+                                            <li><a href="{% url 'shop' %}">Polo Shirts</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -165,14 +164,13 @@
                                         }
                                         </style>
                                         <li class="onhover-dropdownn">
-                                           <a href="{%url 'shop' %}">Store</a>
+                                           <a href="{% url 'shop' %}">Store</a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="headsets.html">Headsets</a></li>
-                                                <li><a href="lap.html">Laptops</a></li>
-                                                <li><a href="watch.html">Watches</a></li>
-                                                <li><a href="tv.html">TV</a></li>
-                                                <li><a href="air.html">Airpods</a></li>
-                                                <li><a href="speaker.html">Speakers</a></li>
+                                                <li><a href="{% url 'shop' %}">Women</a></li>
+                                                <li><a href="{% url 'shop' %}">Men</a></li>
+                                                <li><a href="{% url 'shop' %}">Kids</a></li>
+                                                <li><a href="{% url 'shop' %}">New Arrivals</a></li>
+                                                <li><a href="{% url 'shop' %}">Sale</a></li>
                                             </ul>
                                         </li>
                                         <li>

@@ -14,43 +14,24 @@
     <meta name="keywords" content="ecommerce, shopping, online store">
     <meta name="author" content="Your Name or Company">
 
-    <!-- Favicon -->
     <link rel="icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
     <link rel="shortcut icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
 
-    <title>Quickcart E-commerce</title>
+    <title>Airpods - Fitverse</title>
 
-    
 {% load static %}
-<!-- Google font -->
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.css' %}">
 <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
-
-<!-- Slick slider css -->
 <link rel="stylesheet" href="{% static 'css/slick.css' %}">
 <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
-
-<!-- Animate icon -->
 <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-
-<!-- Themify icon -->
 <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
-
-<!-- Bootstrap css -->
 <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-
-<!-- Theme css -->
 <link rel="stylesheet" href="{% static 'css/color19.css' %}" media="screen" id="color">
-
 </head>
 
 <body>
-
-
-    <!-- header start -->
     <header class="header-tools marketplace">
         <div class="mobile-fix-option"></div>
         <div class="top-header">
@@ -59,17 +40,18 @@
                     <div class="col-lg-6">
                         <div class="header-contact">
                             <ul>
-                                <li>Welcome to Quickcart Downloads</li>
+                                <li>Welcome to Fitverse</li>
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: 123 - 456 - 7890</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 text-right">
                         <ul class="header-dropdown">
-                            <li class="onhover-dropdown mobile-account"> <span data-brackets-id="5088" class="fa fa-user"></span>
+                            <li class="onhover-dropdown mobile-account"> <span class="fa fa-user"></span>
                                 My Account
-                                <ul class="onhover-show-div">                                    <li><a href="{% url 'login' %}" data-lng="en">Login</a></li> 
-                                    <li><a href="{%url 'logout' %}" data-lng="es">Logout</a></li>
+                                <ul class="onhover-show-div">
+                                    <li><a href="{% url 'login' %}">Login</a></li> 
+                                    <li><a href="{% url 'logout' %}">Logout</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -84,38 +66,27 @@
                         <div class="menu-left">
                             <div class="navbar">
                                 <a href="javascript:void(0)" onclick="openNav()">
-                                    <div class="bar-style"><i class="fa fa-bars sidebar-bar" aria-hidden="true"></i>
-                                    </div>
+                                    <div class="bar-style"><i class="fa fa-bars sidebar-bar" aria-hidden="true"></i></div>
                                 </a>
                                 <div id="mySidenav" class="sidenav">
                                     <a href="javascript:void(0)" class="sidebar-overlay" onclick="closeNav()"></a>
                                     <nav>
                                         <div onclick="closeNav()">
-                                            <div class="sidebar-back text-left"><i class="fa fa-angle-left pr-2"
-                                                    aria-hidden="true"></i> Back</div>
+                                            <div class="sidebar-back text-left"><i class="fa fa-angle-left pr-2" aria-hidden="true"></i> Back</div>
                                         </div>
                                         <ul id="sub-menu" class="sm pixelstrap sm-vertical">
-                                            
-                                            <li> <a href="{% url 'headsets_view' %}">Headsets</a>
-                                                
-                                            </li>
-                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
-                                                
-                                            </li>
-                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
-                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
-                                                
-                                            </li>
-                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
-                                            
-                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
+                                            <li><a href="{% url 'tshirts_view' %}">T-Shirts</a></li>
+                                            <li><a href="{% url 'mens_tshirt_view' %}">Men's T-Shirts</a></li>
+                                            <li><a href="{% url 'tops_view' %}">Tops</a></li>
+                                            <li><a href="{% url 'bottom_wear_view' %}">Bottom Wear</a></li>
+                                            <li><a href="{% url 'women_tops_view' %}">Women Tops</a></li>
+                                            <li><a href="{% url 'polo_shirts_view' %}">Polo Shirts</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
                             <div class="brand-logo">
-                                <a href="{% url 'index' %}"><img src="{%static 'images/logo.jpg' %}"
-                                        class="img-fluid blur-up lazyload" alt="Logo"></a>
+                                <a href="{% url 'index' %}"><img src="{% static 'images/logo.jpg' %}" class="img-fluid blur-up lazyload" alt="Logo"></a>
                             </div>
                         </div>
                         <div class="menu-right pull-right">
@@ -124,163 +95,24 @@
                                     <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
                                     <ul id="main-menu" class="sm pixelstrap sm-horizontal">
                                         <li>
-                                            <div class="mobile-back text-right">Back<i class="fa fa-angle-right pl-2"
-                                                    aria-hidden="true"></i></div>
+                                            <div class="mobile-back text-right">Back<i class="fa fa-angle-right pl-2" aria-hidden="true"></i></div>
                                         </li>
-                                      
-                                        <li>
-                                            <a href="{% url 'index' %}">Home</a>
-                                        </li>
-                                        <style>
-
-                                        .dropdown-menu {
-                                                display: none;
-                                                position: absolute;
-                                                background-color: #555;
-                                                border-radius: 5px;
-                                                padding: 10px;
-                                                 top: 100%; /* Add this line */
-                                                    left: 50%; /* Center the dropdown */
-                                                    transform: translateX(-50%); /* Center the dropdown */
-                                                    z-index: 1; /* Add this line */                                            }
-                                         .onhover-dropdownn:hover .dropdown-menu {
-                                            display: block;
-                                        }
-
-                                        /* Style the dropdown items */
-                                        .dropdown-menu > li {
-                                            margin-bottom: 5px;
-                                        }
-
-                                        /* Style links */
-                                        a {
-                                            text-decoration: none;
-                                            color: #fff;
-                                        }
-
-                                        /* Change link color on hover */
-                                        a:hover {
-                                            color: #ffd700;
-                                        }
-                                        </style>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
                                         <li class="onhover-dropdownn">
-                                           <a href="{%url 'shop' %}">Store</a>
-                                            <ul class="dropdown-menu">
-                                                <li> <a href="{% url 'headsets_view' %}">Headsets</a>
-                                                
-                                            </li>
-                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
-                                                
-                                            </li>
-                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
-                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
-                                                
-                                            </li>
-                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
-                                            
-                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
+                                           <a href="{% url 'shop' %}">Store</a>
+                                           <ul class="dropdown-menu">
+                                                <li><a href="{% url 'tshirts_view' %}">T-Shirts</a></li>
+                                                <li><a href="{% url 'mens_tshirt_view' %}">Men's T-Shirts</a></li>
+                                                <li><a href="{% url 'tops_view' %}">Tops</a></li>
+                                                <li><a href="{% url 'bottom_wear_view' %}">Bottom Wear</a></li>
+                                                <li><a href="{% url 'women_tops_view' %}">Women Tops</a></li>
+                                                <li><a href="{% url 'polo_shirts_view' %}">Polo Shirts</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                        <li>
-                                            <a href="{% url 'about' %}">About Us</a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url 'contact' %}">Contact Us</a>
-                                        </li>
-
-
-                                </nav>
-                            </div>
-                            <div>
-                                <div class="icon-nav">
-                                    <ul>
-                                        <li class="onhover-div mobile-search">
-                                        <div>
-                                            <img src="images/search.png" onclick="openSearch()" class="img-fluid " alt="">
-                                            <i class="fa fa-search" onclick="openSearch()"></i>
-                                        </div>
-                                        <div id="search-overlay" class="search-overlay">
-                                            <div>
-                                                <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
-                                                <div class="overlay-content">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-xl-12">
-                                                                <style>
-                                                                    /* Add this CSS to style the search form and button */
-                                                                    .search-form {
-                                                                        display: flex;
-                                                                        align-items: center;
-                                                                    }
-
-                                                                    .search-form input[type="text"] {
-                                                                        flex: 1;
-                                                                        margin-right: 10px;
-                                                                    }
-
-                                                                    /* Adjust other CSS as needed for your styling */
-                                                                </style>
-
-                                                                <form method="POST" >
-                                                                    <div class="form-group search-form">
-                                                                        <input type="text" name="title" class="form-control" id="exampleInputPassword1"
-                                                                            placeholder="Search a Product">
-                                                                        <input type="submit" class="btn btn-solid" name="search" value="Search">
-                                                                    </div>
-                                                                
-</form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="onhover-div mobile-cart">
-                                    <div>
-                                        <img src="{% static 'images/cart.png' %}" class="img-fluid" alt="Cart Icon">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span id="cart-message" class="cart-message">
-                                        {% if cart_items %}
-                                            {{ cart_items|length }}
-                                        {% else %}
-                                            0
-                                        {% endif %}
-                                        </span>
-                                    </div>
-                                    <ul class="show-div shopping-cart">
-                                        {% if cart_items %}
-                                        {% for item in cart_items %}
-                                            <li>
-                                            <div class="media">
-                                                <a href="#">
-                                                <img src="{{ item.product.image.url }}" class="mr-3" alt="{{ item.product.Title }}" style="width: 60px; height: auto;" />
-                                                </a>
-                                                <div class="media-body">
-                                                <h6 class="mt-0">{{ item.product.Title }}</h6>
-                                                <p>Qty: {{ item.quantity }} × Rs.  {{ item.product.dp }}</p>
-                                                </div>
-                                            </div>
-                                            </li>
-                                        {% endfor %}
-                                        <li>
-                                            <div class="total">
-                                            <h5>Subtotal : <span>Rs.  {{ subtotal|floatformat:2 }}</span></h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="buttons">
-                                            <a href="{% url 'cart_view' %}" class="view-cart">View Cart</a>
-                                            <a href="{% url 'checkout'%}" class="checkout">Checkout</a>
-                                            </div>
-                                        </li>
-                                        {% else %}
-                                        <li class="text-center py-3">Your cart is empty.</li>
-                                        {% endif %}
+                                        <li><a href="{% url 'about' %}">About Us</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                     </ul>
-                                    </li>
-
+                                </nav>
                             </div>
                         </div>
                     </div>
@@ -288,21 +120,20 @@
             </div>
         </div>
     </header>
-    <!-- header end -->
 
     <div class="breadcrumb-section">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="page-title">
-                        <h2>shop</h2>
+                        <h2>Airpods</h2>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <nav aria-label="breadcrumb" class="theme-breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Watches</li>
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Airpods</li>
                         </ol>
                     </nav>
                 </div>
@@ -314,100 +145,89 @@
         <div class="collection-wrapper">
             <div class="container">
                 <div class="row">
-
-                    <!-- Sidebar Filters -->
                     <div class="col-sm-3 collection-filter">
                         <div class="collection-filter-block">
-                            <!-- Price Filter -->
                             <div class="collection-collapse-block border-0 open">
                                 <h3 class="collapse-block-title">Price</h3>
                                 <div class="collection-collapse-block-content">
                                     <div class="collection-brand-filter">
-
-                                        <form method="GET" action="{% url 'laptop_view' %}">
+                                        <form method="GET" action="{% url 'airpods_view' %}">
                                             <div class="custom-control custom-checkbox collection-filter-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="hundred" name="price" value="100"
-                                                    {% if '100' in prices %}checked{% endif %}>
-                                                <label class="custom-control-label" for="hundred">Rs.  10 - Rs.  200</label>
+                                                <input type="checkbox" class="custom-control-input" id="hundred" name="price" value="100" {% if '100' in prices %}checked{% endif %}>
+                                                <label class="custom-control-label" for="hundred">Rs. 10 - Rs. 200</label>
                                             </div>
                                             <div class="custom-control custom-checkbox collection-filter-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="twohundred" name="price" value="200"
-                                                    {% if '200' in prices %}checked{% endif %}>
-                                                <label class="custom-control-label" for="twohundred">Rs.  200 - Rs.  400</label>
+                                                <input type="checkbox" class="custom-control-input" id="twohundred" name="price" value="200" {% if '200' in prices %}checked{% endif %}>
+                                                <label class="custom-control-label" for="twohundred">Rs. 200 - Rs. 400</label>
                                             </div>
                                             <div class="custom-control custom-checkbox collection-filter-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="fourhundredabove" name="price" value="400"
-                                                    {% if '400' in prices %}checked{% endif %}>
-                                                <label class="custom-control-label" for="fourhundredabove">Rs.  400 above</label>
+                                                <input type="checkbox" class="custom-control-input" id="fourhundredabove" name="price" value="400" {% if '400' in prices %}checked{% endif %}>
+                                                <label class="custom-control-label" for="fourhundredabove">Rs. 400 above</label>
                                             </div>
                                             <div class="mt-3">
                                                 <button type="submit" class="btn btn-solid">Filter</button>
                                                 <br><br>
-                                                <a href="{% url 'laptop_view' %}" class="btn btn-solid">Remove Filter</a>
+                                                <a href="{% url 'airpods_view' %}" class="btn btn-solid">Remove Filter</a>
                                             </div>
                                         </form>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Sidebar Banner -->
                         <div class="collection-sidebar-banner mt-4">
-                            <a href="#">
-                                <img src="images/bg1.jpg" class="img-fluid blur-up lazyload" alt="">
-                            </a>
+                            <a href="#"><img src="{% static 'images/bg1.jpg' %}" class="img-fluid blur-up lazyload" alt=""></a>
                         </div>
                     </div>
 
-                    <!-- Product Grid -->
                     <div class="collection-content col">
-    <div class="page-main-content">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="collection-product-wrapper">
-                    <div class="row">
-                        {% for product in products %}
-                            {% if product.Title %}
-                                <div class="col-md-4 mb-4">
-                                    <div class="card mb-4">
-                                        <a href="{% url 'product_detail' product.Title %}">
-                                            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.Title }}" height="250">
-                                        </a>
-                                        <div class="card-body text-center">
-                                            <a href="{% url 'product_detail' product.Title %}" class="text-dark">
-                                                <h5 class="card-title">{{ product.Title }}</h5>
-                                            </a>
-                                            <h5>
-                                                <b>Rs.  {{ product.dp }}</b>
-                                                <del class="text-muted">Rs.  {{ product.Price }}</del>
-                                            </h5>
-                                        </div>
-                                        <div class="cart-info cart-wrap">
-                                            <form class="add-to-cart-form" data-product-id="{{ product.id }}">
-                                                {% csrf_token %}
-                                                <input type="hidden" name="quantity" value="1">
-                                                <button type="submit" class="btn btn-icon" title="Add to cart">
-                                                    <i class="fa fa-shopping-cart"></i>
-                                                </button>
-                                            </form>
+                        <div class="page-main-content">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="collection-product-wrapper">
+                                        <div class="row">
+                                            {% for product in products %}
+                                                {% if product.Title %}
+                                                    <div class="col-md-4 mb-4">
+                                                        <div class="card mb-4">
+                                                            <a href="{% url 'product_detail' product.Title %}">
+                                                                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.Title }}" height="250">
+                                                            </a>
+                                                            <div class="card-body text-center">
+                                                                <a href="{% url 'product_detail' product.Title %}" class="text-dark">
+                                                                    <h5 class="card-title">{{ product.Title }}</h5>
+                                                                </a>
+                                                                <h5>
+                                                                    <b>Rs. {{ product.dp }}</b>
+                                                                    <del class="text-muted">Rs. {{ product.Price }}</del>
+                                                                </h5>
+                                                            </div>
+                                                            <div class="cart-info cart-wrap">
+                                                                <form class="add-to-cart-form" data-product-id="{{ product.id }}">
+                                                                    {% csrf_token %}
+                                                                    <input type="hidden" name="quantity" value="1">
+                                                                    <button type="submit" class="btn btn-icon" title="Add to cart">
+                                                                        <i class="fa fa-shopping-cart"></i>
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            {% empty %}
+                                                <div class="col-12"><p class="text-center">No products found.</p></div>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </div>
-                            {% endif %}
-                        {% empty %}
-                            <div class="col-12">
-                                <p class="text-center">No products found.</p>
                             </div>
-                        {% endfor %}
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-            <!-- footer -->
     <footer class="footer-light">
         <div class="light-layout">
             <div class="container">
@@ -422,13 +242,9 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <form
-                                action="https://pixelstrap.us19.list-manage.com/subscribe/post?u=5a128856334b598b395f1fc9b&amp;id=082f74cbda"
-                                class="form-inline subscribe-form auth-form needs-validation" method="post"
-                                id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                            <form class="form-inline subscribe-form auth-form needs-validation" method="post" target="_blank">
                                 <div class="form-group mx-sm-3">
-                                    <input type="text" class="form-control" name="EMAIL" id="mce-EMAIL"
-                                        placeholder="Enter your email" required="required">
+                                    <input type="text" class="form-control" name="EMAIL" placeholder="Enter your email" required="required">
                                 </div>
                                 <button type="submit" class="btn btn-solid" id="mc-submit">subscribe</button>
                             </form>
@@ -437,170 +253,39 @@
                 </section>
             </div>
         </div>
-        <section class="section-b-space light-layout">
-            <div class="container">
-                <div class="row footer-theme partition-f">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-title footer-mobile-title">
-                            <h4>about</h4>
-                        </div>
-                        <div class="footer-contant">
-                            <div class="footer-logo"><img src="images/logo.jpg" alt="Logo"></div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
-                           
-                        </div>
-                    </div>
-                    <div class="col offset-xl-1">
-                        <div class="sub-title">
-                            <div class="footer-title">
-                                <h4>my account</h4>
-                            </div>
-                            <div class="footer-contant">
-                                <ul>
-                                    <li><a href="index.php">home</a></li>
-                                    <li><a href="shop.php">store</a></li>
-                                    <li><a href="about.php">about us</a></li>
-                                    <li><a href="contact.php">contact us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="sub-title">
-                            <div class="footer-title">
-                                <h4>store information</h4>
-                            </div>
-                            <div class="footer-contant">
-                                <ul class="contact-list">
-                                    
-                                    <li><i class="fa fa-phone"></i>Call Us: 123-456-7898</li>
-                                    <li><i class="fa fa-envelope-o"></i>Email Us: <a href="#">Support@Fiot.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </footer>
-    <!-- footer end -->
 
+    <div class="tap-top"><div><i class="fa fa-angle-double-up"></i></div></div>
 
-    <!-- tap to top start -->
-    <div class="tap-top">
-        <div><i class="fa fa-angle-double-up"></i></div>
-    </div>
-    <!-- tap to top end -->
-
-
-<!-- jQuery -->
 <script src="{% static 'js/jquery-3.3.1.min.js' %}" defer></script>
-
-<!-- Popper -->
 <script src="{% static 'js/popper.min.js' %}" defer></script>
-
-<!-- Slick Carousel -->
 <script src="{% static 'js/slick.js' %}" defer></script>
-
-<!-- Menu -->
 <script src="{% static 'js/menu.js' %}" defer></script>
-
-<!-- LazyLoad -->
 <script src="{% static 'js/lazysizes.min.js' %}" defer></script>
-
-<!-- Bootstrap -->
 <script src="{% static 'js/bootstrap.js' %}" defer></script>
-
-<!-- Bootstrap Notify -->
 <script src="{% static 'js/bootstrap-notify.min.js' %}" defer></script>
-
-<!-- Fly Cart -->
 <script src="{% static 'js/fly-cart.js' %}" defer></script>
-
-<!-- Theme Script -->
 <script src="{% static 'js/script.js' %}" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const forms = document.querySelectorAll('.add-to-cart-form');
-
   forms.forEach(form => {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-
       const productId = form.dataset.productId;
       const quantity = form.querySelector('input[name="quantity"]').value || 1;
       const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
-
       fetch("{% url 'ajax_add_to_cart' %}", {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'X-CSRFToken': csrfToken,
-        },
-        body: new URLSearchParams({
-          'product_id': productId,
-          'quantity': quantity,
-        }),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'X-CSRFToken': csrfToken },
+        body: new URLSearchParams({ 'product_id': productId, 'quantity': quantity }),
       })
       .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          // Update cart count and subtotal (if elements exist)
-          const itemCountElem = document.getElementById('cart-item-count');
-          const subtotalElem = document.getElementById('cart-subtotal');
-
-          if (itemCountElem) {
-            itemCountElem.textContent = data.cartItemCount;
-          }
-
-          if (subtotalElem) {
-            subtotalElem.textContent = parseFloat(data.subtotal).toFixed(2);
-          }
-
-          // Optional: show success message
-          alert('Item added to cart!');
-
-          // Optional: auto-refresh the page or cart section
-          location.reload();  // Refresh the full page
-          // OR window.location.href = "{% url 'cart_view' %}";  // Redirect to cart page
-        } else {
-          alert('Failed to add item to cart , Item Out Of Stock');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Error adding item to cart');
-      });
+      .then(data => { if (data.success) { alert('Item added to cart!'); location.reload(); } else { alert('Failed to add item to cart'); } })
+      .catch(error => { console.error('Error:', error); alert('Error adding item to cart'); });
     });
   });
 });
 </script>
-
-<!-- Custom Scripts -->
-<script defer>
-    function openSearch() {
-        document.getElementById("search-overlay").style.display = "block";
-    }
-
-    function closeSearch() {
-        document.getElementById("search-overlay").style.display = "none";
-    }
-
-    function showCartMessage(message) {
-        var cartMessage = document.getElementById("cart-message");
-        cartMessage.textContent = message;
-        cartMessage.style.opacity = "1";
-        cartMessage.style.color = "green"; // Change the color to green
-        cartMessage.style.fontWeight = "bold"; // Make the message bold
-
-        setTimeout(function () {
-            cartMessage.style.opacity = "0";
-            cartMessage.textContent = "";
-        }, 5000); // Display the message for 5 seconds
-    }
-</script>
-
 </body>
-
 </html>

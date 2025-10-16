@@ -18,7 +18,7 @@
     <link rel="icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
     <link rel="shortcut icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
 
-    <title>FitVerse</title>
+    <title>Fitverse</title>
 
     
 {% load static %}
@@ -59,7 +59,7 @@
                     <div class="col-lg-6">
                         <div class="header-contact">
                             <ul>
-                                <li>Welcome to FitVerse Downloads</li>
+                                <li>Welcome to Fitverse Downloads</li>
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: 123 - 456 - 7890</li>
                             </ul>
                         </div>
@@ -96,7 +96,7 @@
                                         </div>
                                         <ul id="sub-menu" class="sm pixelstrap sm-vertical">
                                             
-                                            <li> <a href="{% url 'women_tops_view' %}">Women Tops</a>
+                                           <li> <a href="{% url 'women_tops_view' %}">Women Tops</a>
                                                 
                                             </li>
                                             <li> <a href="{% url 'polo_shirts_view' %}">Polo Shirts</a>
@@ -166,12 +166,19 @@
                                         <li class="onhover-dropdownn">
                                            <a href="{%url 'shop' %}">Store</a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="{% url 'tshirts_view' %}">T-Shirts</a></li>
-                                                <li><a href="{% url 'mens_tshirt_view' %}">Men's T-Shirts</a></li>
-                                                <li><a href="{% url 'tops_view' %}">Tops</a></li>
-                                                <li><a href="{% url 'bottom_wear_view' %}">Bottom Wear</a></li>
-                                                <li><a href="{% url 'women_tops_view' %}">Women Tops</a></li>
-                                                <li><a href="{% url 'polo_shirts_view' %}">Polo Shirts</a></li>
+                                                <li> <a href="{% url 'headsets_view' %}">Headsets</a>
+                                                
+                                            </li>
+                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
+                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
+                                                
+                                            </li>
+                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
+                                            
+                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -317,7 +324,7 @@
                                 <div class="collection-collapse-block-content">
                                     <div class="collection-brand-filter">
 
-                                        <form method="GET" action="{% url 'speakers_view' %}">
+                                        <form method="GET" action="{% url 'laptop_view' %}">
                                             <div class="custom-control custom-checkbox collection-filter-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="hundred" name="price" value="100"
                                                     {% if '100' in prices %}checked{% endif %}>
@@ -336,7 +343,7 @@
                                             <div class="mt-3">
                                                 <button type="submit" class="btn btn-solid">Filter</button>
                                                 <br><br>
-                                                <a href="{% url 'speakers_view' %}" class="btn btn-solid">Remove Filter</a>
+                                                <a href="{% url 'laptop_view' %}" class="btn btn-solid">Remove Filter</a>
                                             </div>
                                         </form>
 
@@ -558,7 +565,7 @@ document.addEventListener('DOMContentLoaded', function () {
           location.reload();  // Refresh the full page
           // OR window.location.href = "{% url 'cart_view' %}";  // Redirect to cart page
         } else {
-          alert('Failed to add item to cart');
+          alert('Failed to add item to cart , Item Out Of Stock');
         }
       })
       .catch(error => {

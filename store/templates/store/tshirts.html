@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>T-Shirts - FitVerse</title>
+    <link rel="icon" href="{% static 'images/1.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/color19.css' %}" id="color">
+</head>
+<body>
+<header class="header-tools marketplace"></header>
+<div class="breadcrumb-section"><div class="container"><h2>T-Shirts</h2></div></div>
+<section class="section-b-space ratio_asos">
+  <div class="container">
+    <form method="GET" action="{% url 'tshirts_view' %}">
+      <label><input type="checkbox" name="price" value="100" {% if '100' in prices %}checked{% endif %}> Rs. 10 - 200</label>
+      <label><input type="checkbox" name="price" value="200" {% if '200' in prices %}checked{% endif %}> Rs. 200 - 400</label>
+      <label><input type="checkbox" name="price" value="400" {% if '400' in prices %}checked{% endif %}> Rs. 400+</label>
+      <button type="submit" class="btn btn-solid">Filter</button>
+      <a href="{% url 'tshirts_view' %}" class="btn btn-solid">Remove Filter</a>
+    </form>
+    <div class="row mt-4">
+      {% for product in products %}
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <a href="{% url 'product_detail' product.Title %}"><img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.Title }}" height="250"></a>
+            <div class="card-body text-center">
+              <a href="{% url 'product_detail' product.Title %}"><h5 class="card-title">{{ product.Title }}</h5></a>
+              <h5><b>Rs. {{ product.dp }}</b> <del class="text-muted">Rs. {{ product.Price }}</del></h5>
+              <form class="add-to-cart-form" data-product-id="{{ product.id }}">{% csrf_token %}<input type="hidden" name="quantity" value="1"><button type="submit" class="btn btn-solid">Add to cart</button></form>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <div class="col-12"><p class="text-center">No products found.</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.add-to-cart-form').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const productId = form.dataset.productId;
+      const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
+      fetch('{% url 'ajax_add_to_cart' %}', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded','X-CSRFToken':csrfToken}, body: new URLSearchParams({'product_id':productId,'quantity':1})}).then(r=>r.json()).then(d=>{ alert(d.success?'Item added to cart!':'Failed to add'); if(d.success){ location.reload(); }});
+    });
+  });
+});
+</script>
+</body>
+</html>

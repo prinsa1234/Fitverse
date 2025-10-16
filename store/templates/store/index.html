@@ -97,21 +97,12 @@
                                                     aria-hidden="true"></i> Back</div>
                                         </div>
                                         <ul id="sub-menu" class="sm pixelstrap sm-vertical">
-                                            
-                                            <li> <a href="{% url 'headsets_view' %}">Top</a>
-                                                
-                                            </li>
-                                            <li> <a href="{% url 'laptop_view' %}">Dress</a>
-                                                
-                                            </li>
-                                            <li><a href="{% url 'watch_view' %}">Shirt</a></li>
-                                            <li> <a href="{% url 'tv_view' %}">Pants</a>
-                                                
-                                            </li>
-                                            <li><a href="{% url 'airpods_view' %}">Kurta</a></li>
-                                            
-                                            <li><a href="{% url 'speakers_view' %}">Night Dress</a></li>
-                                            
+                                            <li><a href="{% url 'shop' %}">Women Tops</a></li>
+                                            <li><a href="{% url 'shop' %}">Shirts</a></li>
+                                            <li><a href="{% url 'shop' %}">Bottoms</a></li>
+                                            <li><a href="{% url 'shop' %}">Pants</a></li>
+                                            <li><a href="{% url 'shop' %}">Men T-Shirts</a></li>
+                                            <li><a href="{% url 'shop' %}">Polo Shirts</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -377,7 +368,7 @@
     <div class="container-fluid">
         <div class="row partition4">
             <div class="col-lg-3 col-md-6 mb-4">
-                <a href="{% url 'headsets_view' %}">
+                <a href="{% url 'mens_tshirt_view' %}">
                     <div class="collection-banner p-right text-right">
                         <div class="uniform-img-container">
                             <img src="{% static 'images/h2.jpg' %}" class="uniform-img">
@@ -393,7 +384,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4">
-                <a href="{% url 'airpods_view' %}">
+                <a href="{% url 'women_tops_view' %}">
                     <div class="collection-banner p-right text-right">
                         <div class="uniform-img-container">
                             <img src="{% static 'images/abg.jpg' %}" class="uniform-img">
@@ -409,7 +400,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4">
-                <a href="{% url 'speakers_view' %}">
+                <a href="{% url 'polo_shirts_view' %}">
                     <div class="collection-banner p-right">
                         <div class="uniform-img-container">
                             <img src="{% static 'images/sbg.jpg' %}" class="uniform-img">
@@ -425,7 +416,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4">
-                <a href="{% url 'tv_view' %}">
+                <a href="{% url 'bottom_wear_view' %}">
                     <div class="collection-banner p-left">
                         <div class="uniform-img-container">
                             <img src="{% static 'images/tvbg.png' %}" class="uniform-img">
@@ -574,7 +565,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <form
+                            <form>
                             <div class="form-inline auth-form">
                                 <div class="form-group mx-sm-3">
                                     <p> Follow Us on instagram to get our latest updates  :  </p>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
-    <title>Quickcart E-commerce</title>
+    <title>FitVerse</title>
 
     
 {% load static %}
@@ -61,7 +61,7 @@
                     <div class="col-lg-6">
                         <div class="header-contact">
                             <ul>
-                                <li>Welcome to Quickcart Downloads</li>
+                                <li>Welcome to FitVerse Downloads</li>
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: 123 - 456 - 7890</li>
                             </ul>
                         </div>
@@ -98,20 +98,19 @@
                                         </div>
                                         <ul id="sub-menu" class="sm pixelstrap sm-vertical">
                                             
-                                            <li> <a href="{% url 'headsets_view' %}">Headsets</a>
+                                            <li> <a href="{% url 'women_tops_view' %}">Women Tops</a>
                                                 
                                             </li>
-                                            <li> <a href="{% url 'laptop_view' %}">Laptops</a>
+                                            <li> <a href="{% url 'polo_shirts_view' %}">Polo Shirts</a>
                                                 
                                             </li>
-                                            <li><a href="{% url 'watch_view' %}">watches</a></li>
-                                            <li> <a href="{% url 'tv_view' %}">Tv</a>
+                                            <li><a href="{% url 'bottom_wear_view' %}">Bottoms</a></li>
+                                            <li> <a href="{% url 'bottom_wear_view' %}">Pants</a>
                                                 
                                             </li>
-                                            <li><a href="{% url 'airpods_view' %}">Airpods</a></li>
+                                            <li><a href="{% url 'mens_tshirt_view' %}">Men Tshirt</a></li>
                                             
-                                            <li><a href="{% url 'speakers_view' %}">Speakers</a></li>
-                                            
+                                            <li><a href="{% url 'polo_shirts_view' %}">Polo Shirts</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -169,12 +168,12 @@
                                         <li class="onhover-dropdownn">
                                            <a href="{%url 'shop' %}">Store</a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="headsets.html">Headsets</a></li>
-                                                <li><a href="lap.html">Laptops</a></li>
-                                                <li><a href="watch.html">Watches</a></li>
-                                                <li><a href="tv.html">TV</a></li>
-                                                <li><a href="air.html">Airpods</a></li>
-                                                <li><a href="speaker.html">Speakers</a></li>
+                                                <li><a href="{% url 'tshirts_view' %}">T-Shirts</a></li>
+                                                <li><a href="{% url 'mens_tshirt_view' %}">Men's T-Shirts</a></li>
+                                                <li><a href="{% url 'tops_view' %}">Tops</a></li>
+                                                <li><a href="{% url 'bottom_wear_view' %}">Bottom Wear</a></li>
+                                                <li><a href="{% url 'women_tops_view' %}">Women Tops</a></li>
+                                                <li><a href="{% url 'polo_shirts_view' %}">Polo Shirts</a></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -371,7 +370,7 @@
                             <input type="submit" name="cart" class="btn btn-solid" value="Add To Cart" onclick="logAddToCart({{ product.id }})">
                         </div>
                     </form>
-                    <button type="button" class="btn btn-outline-primary" id="tryOnBtn" data-product-id="{{ product.id }}">
+                    <button type="button" class="btn btn-solid" id="tryOnBtn" data-product-id="{{ product.id }}">
                         <i class="fa-solid fa-shirt"></i> Try On
                     </button>
 
